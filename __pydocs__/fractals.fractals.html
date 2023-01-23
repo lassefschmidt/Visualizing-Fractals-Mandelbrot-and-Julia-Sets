@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module fractals.fractals</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="fractals.html"><font color="#ffffff">fractals</font></a>.fractals</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cdokumente%5C2_bildung%5C2_msc%5C1_classes%5Cpython%5C3_project%5C0_code%20dev%5Cstage3-7%20-%20new%20pygame%20buttons%5Cfractals%5Cfractals.py">d:\dokumente\2_bildung\2_msc\1_classes\python\3_project\0_code dev\stage3-7 - new pygame buttons\fractals\fractals.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;import&nbsp;own&nbsp;.py&nbsp;files</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="fractals.gufunc.html">fractals.gufunc</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="fractals.fractals.html#Fractal">Fractal</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="fractals.fractals.html#JuliaSet">JuliaSet</a>
+</font></dt><dt><font face="helvetica, arial"><a href="fractals.fractals.html#Mandelbrot">Mandelbrot</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Fractal">class <strong>Fractal</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Fractal">Fractal</a>(width,&nbsp;height,&nbsp;max_iter,&nbsp;xlim,&nbsp;ylim,&nbsp;esc_radius_sq=100.0)<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Fractal-__init__"><strong>__init__</strong></a>(self, width, height, max_iter, xlim, ylim, esc_radius_sq=100.0)</dt><dd><tt>Constructor&nbsp;method&nbsp;of&nbsp;<a href="#Fractal">Fractal</a>&nbsp;class<br>
+&nbsp;<br>
+Args:<br>
+-------<br>
+width,&nbsp;height:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;points&nbsp;we&nbsp;evaluate&nbsp;on&nbsp;x-,&nbsp;y-axis&nbsp;(directly&nbsp;influences&nbsp;rendering&nbsp;quality&nbsp;/&nbsp;resolution&nbsp;of&nbsp;image)<br>
+max_iter:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;number&nbsp;of&nbsp;iterations&nbsp;to&nbsp;be&nbsp;computed&nbsp;for&nbsp;each&nbsp;point<br>
+xlim,&nbsp;ylim:&nbsp;np.array&nbsp;containing&nbsp;2&nbsp;numeric&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower&nbsp;and&nbsp;upper&nbsp;limit&nbsp;on&nbsp;x-&nbsp;and&nbsp;y-axis<br>
+esc_radius_sq:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;squared&nbsp;escape&nbsp;radius&nbsp;(if&nbsp;|z|^2&nbsp;=&nbsp;Z_real^2&nbsp;+&nbsp;Z_i^2&nbsp;becomes&nbsp;greater&nbsp;than&nbsp;the&nbsp;squared&nbsp;escape&nbsp;radius,&nbsp;we&nbsp;assume&nbsp;that&nbsp;it&nbsp;has&nbsp;escaped)</tt></dd></dl>
+
+<dl><dt><a name="Fractal-color_fractal"><strong>color_fractal</strong></a>(self, m, ms, cmap_id, unique_colors, interpolation_method, color_norm)</dt><dd><tt>assign&nbsp;every&nbsp;point&nbsp;of&nbsp;fractal&nbsp;a&nbsp;color&nbsp;(RGB&nbsp;color&nbsp;space)&nbsp;<br>
+&nbsp;<br>
+Sources:<br>
+--------<br>
+<a href="http://linas.org/art-gallery/escape/smooth.html">http://linas.org/art-gallery/escape/smooth.html</a><br>
+<a href="http://linas.org/art-gallery/escape/escape.html">http://linas.org/art-gallery/escape/escape.html</a><br>
+<a href="https://rubenvannieuwpoort.nl/posts/smooth-iteration-count-for-the-mandelbrot-set">https://rubenvannieuwpoort.nl/posts/smooth-iteration-count-for-the-mandelbrot-set</a><br>
+<a href="https://csl.name/post/mandelbrot-rendering/">https://csl.name/post/mandelbrot-rendering/</a><br>
+&nbsp;<br>
+Args<br>
+----<br>
+m:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;of&nbsp;simple&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal<br>
+ms:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;of&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal<br>
+cmap_id:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;colormap<br>
+unique_colors:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;desired&nbsp;amount&nbsp;of&nbsp;unique&nbsp;colors&nbsp;in&nbsp;colormap<br>
+interpolation_method:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;interpolation&nbsp;method<br>
+color_norm:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;normalization&nbsp;method&nbsp;to&nbsp;choose&nbsp;whether&nbsp;we&nbsp;color&nbsp;the&nbsp;fractal&nbsp;based&nbsp;on&nbsp;m&nbsp;(simple&nbsp;iteration&nbsp;count)&nbsp;or&nbsp;ms&nbsp;(smoothed&nbsp;iteration&nbsp;count)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+mu_rgb:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB&nbsp;color&nbsp;for&nbsp;every&nbsp;single&nbsp;point&nbsp;we&nbsp;evaluated&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane</tt></dd></dl>
+
+<dl><dt><a name="Fractal-fetch_iter_color"><strong>fetch_iter_color</strong></a>(self, mu, cmap)</dt><dd><tt>Fetch&nbsp;every&nbsp;color&nbsp;based&nbsp;on&nbsp;mu&nbsp;(the&nbsp;value&nbsp;of&nbsp;every&nbsp;element&nbsp;in&nbsp;mu&nbsp;is&nbsp;the&nbsp;color_id,&nbsp;which&nbsp;corresponds&nbsp;to&nbsp;a&nbsp;specific&nbsp;row&nbsp;in&nbsp;the&nbsp;color&nbsp;map)<br>
+&nbsp;<br>
+Args<br>
+----<br>
+mu:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;normalized&nbsp;array&nbsp;of&nbsp;simple&nbsp;/&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal&nbsp;(normalized&nbsp;with&nbsp;mod&nbsp;n,&nbsp;where&nbsp;n&nbsp;equals&nbsp;number&nbsp;of&nbsp;rows&nbsp;in&nbsp;chosen&nbsp;colormap)<br>
+cmap:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;colormap&nbsp;in&nbsp;nd.array&nbsp;with&nbsp;shape&nbsp;(unique_colors,&nbsp;3),&nbsp;in&nbsp;which&nbsp;every&nbsp;row&nbsp;contains&nbsp;a&nbsp;specific&nbsp;RGB&nbsp;color<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+mu_rgb:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB&nbsp;color&nbsp;for&nbsp;every&nbsp;single&nbsp;point&nbsp;we&nbsp;evaluated&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane&nbsp;(values&nbsp;that&nbsp;never&nbsp;escape&nbsp;are&nbsp;not&nbsp;correctly&nbsp;colored&nbsp;yet)</tt></dd></dl>
+
+<dl><dt><a name="Fractal-get_cmap"><strong>get_cmap</strong></a>(self, cmap_id)</dt><dd><tt>Fetch&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map&nbsp;in&nbsp;RGB&nbsp;color&nbsp;space<br>
+&nbsp;<br>
+Args<br>
+----<br>
+cmap_id:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;colormap<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+x_obs:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;x-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+y_obs:&nbsp;list[list[int]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+color_max:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RBG-values&nbsp;for&nbsp;points&nbsp;that&nbsp;never&nbsp;escape</tt></dd></dl>
+
+<dl><dt><a name="Fractal-get_coord"><strong>get_coord</strong></a>(self, point)</dt><dd><tt>transform&nbsp;pygame&nbsp;coordinates&nbsp;(point)&nbsp;to&nbsp;fractal&nbsp;coordinates&nbsp;on&nbsp;complex&nbsp;plane<br>
+&nbsp;<br>
+Args<br>
+----<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer&nbsp;(in&nbsp;pygame&nbsp;coordinates)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+coordinates&nbsp;(numeric)&nbsp;of&nbsp;given&nbsp;point&nbsp;in&nbsp;complex&nbsp;plane&nbsp;of&nbsp;selected&nbsp;fractal&nbsp;instance</tt></dd></dl>
+
+<dl><dt><a name="Fractal-get_grid"><strong>get_grid</strong></a>(self)</dt><dd><tt>Create&nbsp;coordinate&nbsp;grid&nbsp;based&nbsp;on&nbsp;xlim,&nbsp;ylim<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+the&nbsp;two&nbsp;outputs&nbsp;of&nbsp;np.meshgrid&nbsp;converted&nbsp;to&nbsp;pygame&nbsp;coordinates</tt></dd></dl>
+
+<dl><dt><a name="Fractal-interpolate_cmap"><strong>interpolate_cmap</strong></a>(self, unique_colors, interpolation_method, x_obs, y_obs, fact_lowerbound=0, fact_upperbound=255)</dt><dd><tt>take&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map&nbsp;and&nbsp;create&nbsp;full&nbsp;cmap&nbsp;based&nbsp;on&nbsp;chosen&nbsp;interpolation_method&nbsp;(with&nbsp;as&nbsp;many&nbsp;colors&nbsp;as&nbsp;unique_colors)<br>
+&nbsp;<br>
+Sources<br>
+-------<br>
+<a href="https://blogs.mathworks.com/cleve/2019/04/29/makima-piecewise-cubic-interpolation/">https://blogs.mathworks.com/cleve/2019/04/29/makima-piecewise-cubic-interpolation/</a><br>
+&nbsp;<br>
+Args<br>
+----<br>
+unique_colors:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;desired&nbsp;amount&nbsp;of&nbsp;unique&nbsp;colors&nbsp;in&nbsp;colormap<br>
+interpolation_method:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;interpolation&nbsp;method<br>
+x_obs:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;x-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+y_obs:&nbsp;list[list[int]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+fact_lowerbound,&nbsp;fact_upperbound:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower-&nbsp;and&nbsp;upperbound&nbsp;of&nbsp;chosen&nbsp;colorspace&nbsp;(RGB&nbsp;starts&nbsp;with&nbsp;0&nbsp;and&nbsp;ends&nbsp;with&nbsp;255)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+cmap:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;colormap&nbsp;in&nbsp;nd.array&nbsp;with&nbsp;shape&nbsp;(unique_colors,&nbsp;3),&nbsp;in&nbsp;which&nbsp;every&nbsp;row&nbsp;contains&nbsp;a&nbsp;specific&nbsp;RGB&nbsp;color<br>
+fact_upperbound:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upperbound&nbsp;of&nbsp;chosen&nbsp;colorspace</tt></dd></dl>
+
+<dl><dt><a name="Fractal-zoom"><strong>zoom</strong></a>(self, point, zoom_factor)</dt><dd><tt>zooms&nbsp;/&nbsp;moves&nbsp;towards&nbsp;given&nbsp;point&nbsp;(in&nbsp;complex&nbsp;coordinates)&nbsp;in&nbsp;<a href="#Fractal">Fractal</a>&nbsp;(updates&nbsp;xlim,&nbsp;ylim&nbsp;instance&nbsp;variables)<br>
+&nbsp;<br>
+Args<br>
+----<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer&nbsp;(in&nbsp;complex&nbsp;coordinates&nbsp;of&nbsp;given&nbsp;fractal)<br>
+zoom_factor:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;equal&nbsp;to&nbsp;1,&nbsp;we&nbsp;center&nbsp;the&nbsp;image&nbsp;at&nbsp;the&nbsp;given&nbsp;point&nbsp;without&nbsp;zooming&nbsp;in&nbsp;or&nbsp;out;&nbsp;if&nbsp;greater&nbsp;1,&nbsp;we&nbsp;zoom&nbsp;in;&nbsp;if&nbsp;smaller&nbsp;1,&nbsp;we&nbsp;zoom&nbsp;out</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="JuliaSet">class <strong>JuliaSet</strong></a>(<a href="fractals.fractals.html#Fractal">Fractal</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#JuliaSet">JuliaSet</a>(width,&nbsp;height,&nbsp;max_iter,&nbsp;C=0j,&nbsp;esc_radius_sq=10.0,&nbsp;xlim=array([-2,&nbsp;&nbsp;2]),&nbsp;ylim=array([-2,&nbsp;&nbsp;2]))<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="fractals.fractals.html#JuliaSet">JuliaSet</a></dd>
+<dd><a href="fractals.fractals.html#Fractal">Fractal</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="JuliaSet-__init__"><strong>__init__</strong></a>(self, width, height, max_iter, C=0j, esc_radius_sq=10.0, xlim=array([-2,  2]), ylim=array([-2,  2]))</dt><dd><tt>Constructor&nbsp;method&nbsp;of&nbsp;<a href="#Fractal">Fractal</a>&nbsp;class<br>
+&nbsp;<br>
+Args:<br>
+-------<br>
+width,&nbsp;height:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;points&nbsp;we&nbsp;evaluate&nbsp;on&nbsp;x-,&nbsp;y-axis&nbsp;(directly&nbsp;influences&nbsp;rendering&nbsp;quality&nbsp;/&nbsp;resolution&nbsp;of&nbsp;image)<br>
+max_iter:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;number&nbsp;of&nbsp;iterations&nbsp;to&nbsp;be&nbsp;computed&nbsp;for&nbsp;each&nbsp;point<br>
+xlim,&nbsp;ylim:&nbsp;np.array&nbsp;containing&nbsp;2&nbsp;numeric&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower&nbsp;and&nbsp;upper&nbsp;limit&nbsp;on&nbsp;x-&nbsp;and&nbsp;y-axis<br>
+esc_radius_sq:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;squared&nbsp;escape&nbsp;radius&nbsp;(if&nbsp;|z|^2&nbsp;=&nbsp;Z_real^2&nbsp;+&nbsp;Z_i^2&nbsp;becomes&nbsp;greater&nbsp;than&nbsp;the&nbsp;squared&nbsp;escape&nbsp;radius,&nbsp;we&nbsp;assume&nbsp;that&nbsp;it&nbsp;has&nbsp;escaped)</tt></dd></dl>
+
+<dl><dt><a name="JuliaSet-calc"><strong>calc</strong></a>(self)</dt><dd><tt>generates&nbsp;Julia&nbsp;set<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+m:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;iterations&nbsp;when&nbsp;point&nbsp;x_{i},&nbsp;y_{j}&nbsp;escaped&nbsp;or&nbsp;reached&nbsp;max_iter&nbsp;(simple&nbsp;iteration&nbsp;count)<br>
+ms:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fractionalised&nbsp;number&nbsp;of&nbsp;iterations&nbsp;when&nbsp;point&nbsp;x_{i},&nbsp;y_{j}&nbsp;escaped&nbsp;or&nbsp;reached&nbsp;max_iter&nbsp;(smoothed&nbsp;iteration&nbsp;count)</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="fractals.fractals.html#Fractal">Fractal</a>:<br>
+<dl><dt><a name="JuliaSet-color_fractal"><strong>color_fractal</strong></a>(self, m, ms, cmap_id, unique_colors, interpolation_method, color_norm)</dt><dd><tt>assign&nbsp;every&nbsp;point&nbsp;of&nbsp;fractal&nbsp;a&nbsp;color&nbsp;(RGB&nbsp;color&nbsp;space)&nbsp;<br>
+&nbsp;<br>
+Sources:<br>
+--------<br>
+<a href="http://linas.org/art-gallery/escape/smooth.html">http://linas.org/art-gallery/escape/smooth.html</a><br>
+<a href="http://linas.org/art-gallery/escape/escape.html">http://linas.org/art-gallery/escape/escape.html</a><br>
+<a href="https://rubenvannieuwpoort.nl/posts/smooth-iteration-count-for-the-mandelbrot-set">https://rubenvannieuwpoort.nl/posts/smooth-iteration-count-for-the-mandelbrot-set</a><br>
+<a href="https://csl.name/post/mandelbrot-rendering/">https://csl.name/post/mandelbrot-rendering/</a><br>
+&nbsp;<br>
+Args<br>
+----<br>
+m:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;of&nbsp;simple&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal<br>
+ms:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;of&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal<br>
+cmap_id:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;colormap<br>
+unique_colors:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;desired&nbsp;amount&nbsp;of&nbsp;unique&nbsp;colors&nbsp;in&nbsp;colormap<br>
+interpolation_method:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;interpolation&nbsp;method<br>
+color_norm:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;normalization&nbsp;method&nbsp;to&nbsp;choose&nbsp;whether&nbsp;we&nbsp;color&nbsp;the&nbsp;fractal&nbsp;based&nbsp;on&nbsp;m&nbsp;(simple&nbsp;iteration&nbsp;count)&nbsp;or&nbsp;ms&nbsp;(smoothed&nbsp;iteration&nbsp;count)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+mu_rgb:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB&nbsp;color&nbsp;for&nbsp;every&nbsp;single&nbsp;point&nbsp;we&nbsp;evaluated&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane</tt></dd></dl>
+
+<dl><dt><a name="JuliaSet-fetch_iter_color"><strong>fetch_iter_color</strong></a>(self, mu, cmap)</dt><dd><tt>Fetch&nbsp;every&nbsp;color&nbsp;based&nbsp;on&nbsp;mu&nbsp;(the&nbsp;value&nbsp;of&nbsp;every&nbsp;element&nbsp;in&nbsp;mu&nbsp;is&nbsp;the&nbsp;color_id,&nbsp;which&nbsp;corresponds&nbsp;to&nbsp;a&nbsp;specific&nbsp;row&nbsp;in&nbsp;the&nbsp;color&nbsp;map)<br>
+&nbsp;<br>
+Args<br>
+----<br>
+mu:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;normalized&nbsp;array&nbsp;of&nbsp;simple&nbsp;/&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal&nbsp;(normalized&nbsp;with&nbsp;mod&nbsp;n,&nbsp;where&nbsp;n&nbsp;equals&nbsp;number&nbsp;of&nbsp;rows&nbsp;in&nbsp;chosen&nbsp;colormap)<br>
+cmap:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;colormap&nbsp;in&nbsp;nd.array&nbsp;with&nbsp;shape&nbsp;(unique_colors,&nbsp;3),&nbsp;in&nbsp;which&nbsp;every&nbsp;row&nbsp;contains&nbsp;a&nbsp;specific&nbsp;RGB&nbsp;color<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+mu_rgb:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB&nbsp;color&nbsp;for&nbsp;every&nbsp;single&nbsp;point&nbsp;we&nbsp;evaluated&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane&nbsp;(values&nbsp;that&nbsp;never&nbsp;escape&nbsp;are&nbsp;not&nbsp;correctly&nbsp;colored&nbsp;yet)</tt></dd></dl>
+
+<dl><dt><a name="JuliaSet-get_cmap"><strong>get_cmap</strong></a>(self, cmap_id)</dt><dd><tt>Fetch&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map&nbsp;in&nbsp;RGB&nbsp;color&nbsp;space<br>
+&nbsp;<br>
+Args<br>
+----<br>
+cmap_id:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;colormap<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+x_obs:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;x-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+y_obs:&nbsp;list[list[int]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+color_max:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RBG-values&nbsp;for&nbsp;points&nbsp;that&nbsp;never&nbsp;escape</tt></dd></dl>
+
+<dl><dt><a name="JuliaSet-get_coord"><strong>get_coord</strong></a>(self, point)</dt><dd><tt>transform&nbsp;pygame&nbsp;coordinates&nbsp;(point)&nbsp;to&nbsp;fractal&nbsp;coordinates&nbsp;on&nbsp;complex&nbsp;plane<br>
+&nbsp;<br>
+Args<br>
+----<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer&nbsp;(in&nbsp;pygame&nbsp;coordinates)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+coordinates&nbsp;(numeric)&nbsp;of&nbsp;given&nbsp;point&nbsp;in&nbsp;complex&nbsp;plane&nbsp;of&nbsp;selected&nbsp;fractal&nbsp;instance</tt></dd></dl>
+
+<dl><dt><a name="JuliaSet-get_grid"><strong>get_grid</strong></a>(self)</dt><dd><tt>Create&nbsp;coordinate&nbsp;grid&nbsp;based&nbsp;on&nbsp;xlim,&nbsp;ylim<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+the&nbsp;two&nbsp;outputs&nbsp;of&nbsp;np.meshgrid&nbsp;converted&nbsp;to&nbsp;pygame&nbsp;coordinates</tt></dd></dl>
+
+<dl><dt><a name="JuliaSet-interpolate_cmap"><strong>interpolate_cmap</strong></a>(self, unique_colors, interpolation_method, x_obs, y_obs, fact_lowerbound=0, fact_upperbound=255)</dt><dd><tt>take&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map&nbsp;and&nbsp;create&nbsp;full&nbsp;cmap&nbsp;based&nbsp;on&nbsp;chosen&nbsp;interpolation_method&nbsp;(with&nbsp;as&nbsp;many&nbsp;colors&nbsp;as&nbsp;unique_colors)<br>
+&nbsp;<br>
+Sources<br>
+-------<br>
+<a href="https://blogs.mathworks.com/cleve/2019/04/29/makima-piecewise-cubic-interpolation/">https://blogs.mathworks.com/cleve/2019/04/29/makima-piecewise-cubic-interpolation/</a><br>
+&nbsp;<br>
+Args<br>
+----<br>
+unique_colors:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;desired&nbsp;amount&nbsp;of&nbsp;unique&nbsp;colors&nbsp;in&nbsp;colormap<br>
+interpolation_method:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;interpolation&nbsp;method<br>
+x_obs:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;x-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+y_obs:&nbsp;list[list[int]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+fact_lowerbound,&nbsp;fact_upperbound:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower-&nbsp;and&nbsp;upperbound&nbsp;of&nbsp;chosen&nbsp;colorspace&nbsp;(RGB&nbsp;starts&nbsp;with&nbsp;0&nbsp;and&nbsp;ends&nbsp;with&nbsp;255)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+cmap:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;colormap&nbsp;in&nbsp;nd.array&nbsp;with&nbsp;shape&nbsp;(unique_colors,&nbsp;3),&nbsp;in&nbsp;which&nbsp;every&nbsp;row&nbsp;contains&nbsp;a&nbsp;specific&nbsp;RGB&nbsp;color<br>
+fact_upperbound:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upperbound&nbsp;of&nbsp;chosen&nbsp;colorspace</tt></dd></dl>
+
+<dl><dt><a name="JuliaSet-zoom"><strong>zoom</strong></a>(self, point, zoom_factor)</dt><dd><tt>zooms&nbsp;/&nbsp;moves&nbsp;towards&nbsp;given&nbsp;point&nbsp;(in&nbsp;complex&nbsp;coordinates)&nbsp;in&nbsp;<a href="#Fractal">Fractal</a>&nbsp;(updates&nbsp;xlim,&nbsp;ylim&nbsp;instance&nbsp;variables)<br>
+&nbsp;<br>
+Args<br>
+----<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer&nbsp;(in&nbsp;complex&nbsp;coordinates&nbsp;of&nbsp;given&nbsp;fractal)<br>
+zoom_factor:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;equal&nbsp;to&nbsp;1,&nbsp;we&nbsp;center&nbsp;the&nbsp;image&nbsp;at&nbsp;the&nbsp;given&nbsp;point&nbsp;without&nbsp;zooming&nbsp;in&nbsp;or&nbsp;out;&nbsp;if&nbsp;greater&nbsp;1,&nbsp;we&nbsp;zoom&nbsp;in;&nbsp;if&nbsp;smaller&nbsp;1,&nbsp;we&nbsp;zoom&nbsp;out</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="fractals.fractals.html#Fractal">Fractal</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Mandelbrot">class <strong>Mandelbrot</strong></a>(<a href="fractals.fractals.html#Fractal">Fractal</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Mandelbrot">Mandelbrot</a>(width,&nbsp;height,&nbsp;max_iter,&nbsp;esc_radius_sq=100.0,&nbsp;xlim=array([-2.5,&nbsp;&nbsp;1.5]),&nbsp;ylim=array([-2,&nbsp;&nbsp;2]))<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="fractals.fractals.html#Mandelbrot">Mandelbrot</a></dd>
+<dd><a href="fractals.fractals.html#Fractal">Fractal</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Mandelbrot-__init__"><strong>__init__</strong></a>(self, width, height, max_iter, esc_radius_sq=100.0, xlim=array([-2.5,  1.5]), ylim=array([-2,  2]))</dt><dd><tt>Constructor&nbsp;method&nbsp;of&nbsp;<a href="#Fractal">Fractal</a>&nbsp;class<br>
+&nbsp;<br>
+Args:<br>
+-------<br>
+width,&nbsp;height:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;points&nbsp;we&nbsp;evaluate&nbsp;on&nbsp;x-,&nbsp;y-axis&nbsp;(directly&nbsp;influences&nbsp;rendering&nbsp;quality&nbsp;/&nbsp;resolution&nbsp;of&nbsp;image)<br>
+max_iter:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;number&nbsp;of&nbsp;iterations&nbsp;to&nbsp;be&nbsp;computed&nbsp;for&nbsp;each&nbsp;point<br>
+xlim,&nbsp;ylim:&nbsp;np.array&nbsp;containing&nbsp;2&nbsp;numeric&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower&nbsp;and&nbsp;upper&nbsp;limit&nbsp;on&nbsp;x-&nbsp;and&nbsp;y-axis<br>
+esc_radius_sq:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;squared&nbsp;escape&nbsp;radius&nbsp;(if&nbsp;|z|^2&nbsp;=&nbsp;Z_real^2&nbsp;+&nbsp;Z_i^2&nbsp;becomes&nbsp;greater&nbsp;than&nbsp;the&nbsp;squared&nbsp;escape&nbsp;radius,&nbsp;we&nbsp;assume&nbsp;that&nbsp;it&nbsp;has&nbsp;escaped)</tt></dd></dl>
+
+<dl><dt><a name="Mandelbrot-calc"><strong>calc</strong></a>(self)</dt><dd><tt>generates&nbsp;mandelbrot&nbsp;set<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+m:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;iterations&nbsp;when&nbsp;point&nbsp;x_{i},&nbsp;y_{j}&nbsp;escaped&nbsp;or&nbsp;reached&nbsp;max_iter&nbsp;(simple&nbsp;iteration&nbsp;count)<br>
+ms:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fractionalised&nbsp;number&nbsp;of&nbsp;iterations&nbsp;when&nbsp;point&nbsp;x_{i},&nbsp;y_{j}&nbsp;escaped&nbsp;or&nbsp;reached&nbsp;max_iter&nbsp;(smoothed&nbsp;iteration&nbsp;count)</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="fractals.fractals.html#Fractal">Fractal</a>:<br>
+<dl><dt><a name="Mandelbrot-color_fractal"><strong>color_fractal</strong></a>(self, m, ms, cmap_id, unique_colors, interpolation_method, color_norm)</dt><dd><tt>assign&nbsp;every&nbsp;point&nbsp;of&nbsp;fractal&nbsp;a&nbsp;color&nbsp;(RGB&nbsp;color&nbsp;space)&nbsp;<br>
+&nbsp;<br>
+Sources:<br>
+--------<br>
+<a href="http://linas.org/art-gallery/escape/smooth.html">http://linas.org/art-gallery/escape/smooth.html</a><br>
+<a href="http://linas.org/art-gallery/escape/escape.html">http://linas.org/art-gallery/escape/escape.html</a><br>
+<a href="https://rubenvannieuwpoort.nl/posts/smooth-iteration-count-for-the-mandelbrot-set">https://rubenvannieuwpoort.nl/posts/smooth-iteration-count-for-the-mandelbrot-set</a><br>
+<a href="https://csl.name/post/mandelbrot-rendering/">https://csl.name/post/mandelbrot-rendering/</a><br>
+&nbsp;<br>
+Args<br>
+----<br>
+m:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;of&nbsp;simple&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal<br>
+ms:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;of&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal<br>
+cmap_id:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;colormap<br>
+unique_colors:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;desired&nbsp;amount&nbsp;of&nbsp;unique&nbsp;colors&nbsp;in&nbsp;colormap<br>
+interpolation_method:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;interpolation&nbsp;method<br>
+color_norm:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;normalization&nbsp;method&nbsp;to&nbsp;choose&nbsp;whether&nbsp;we&nbsp;color&nbsp;the&nbsp;fractal&nbsp;based&nbsp;on&nbsp;m&nbsp;(simple&nbsp;iteration&nbsp;count)&nbsp;or&nbsp;ms&nbsp;(smoothed&nbsp;iteration&nbsp;count)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+mu_rgb:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB&nbsp;color&nbsp;for&nbsp;every&nbsp;single&nbsp;point&nbsp;we&nbsp;evaluated&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane</tt></dd></dl>
+
+<dl><dt><a name="Mandelbrot-fetch_iter_color"><strong>fetch_iter_color</strong></a>(self, mu, cmap)</dt><dd><tt>Fetch&nbsp;every&nbsp;color&nbsp;based&nbsp;on&nbsp;mu&nbsp;(the&nbsp;value&nbsp;of&nbsp;every&nbsp;element&nbsp;in&nbsp;mu&nbsp;is&nbsp;the&nbsp;color_id,&nbsp;which&nbsp;corresponds&nbsp;to&nbsp;a&nbsp;specific&nbsp;row&nbsp;in&nbsp;the&nbsp;color&nbsp;map)<br>
+&nbsp;<br>
+Args<br>
+----<br>
+mu:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;normalized&nbsp;array&nbsp;of&nbsp;simple&nbsp;/&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;of&nbsp;fractal&nbsp;(normalized&nbsp;with&nbsp;mod&nbsp;n,&nbsp;where&nbsp;n&nbsp;equals&nbsp;number&nbsp;of&nbsp;rows&nbsp;in&nbsp;chosen&nbsp;colormap)<br>
+cmap:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;colormap&nbsp;in&nbsp;nd.array&nbsp;with&nbsp;shape&nbsp;(unique_colors,&nbsp;3),&nbsp;in&nbsp;which&nbsp;every&nbsp;row&nbsp;contains&nbsp;a&nbsp;specific&nbsp;RGB&nbsp;color<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+mu_rgb:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB&nbsp;color&nbsp;for&nbsp;every&nbsp;single&nbsp;point&nbsp;we&nbsp;evaluated&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane&nbsp;(values&nbsp;that&nbsp;never&nbsp;escape&nbsp;are&nbsp;not&nbsp;correctly&nbsp;colored&nbsp;yet)</tt></dd></dl>
+
+<dl><dt><a name="Mandelbrot-get_cmap"><strong>get_cmap</strong></a>(self, cmap_id)</dt><dd><tt>Fetch&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map&nbsp;in&nbsp;RGB&nbsp;color&nbsp;space<br>
+&nbsp;<br>
+Args<br>
+----<br>
+cmap_id:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;colormap<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+x_obs:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;x-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+y_obs:&nbsp;list[list[int]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+color_max:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RBG-values&nbsp;for&nbsp;points&nbsp;that&nbsp;never&nbsp;escape</tt></dd></dl>
+
+<dl><dt><a name="Mandelbrot-get_coord"><strong>get_coord</strong></a>(self, point)</dt><dd><tt>transform&nbsp;pygame&nbsp;coordinates&nbsp;(point)&nbsp;to&nbsp;fractal&nbsp;coordinates&nbsp;on&nbsp;complex&nbsp;plane<br>
+&nbsp;<br>
+Args<br>
+----<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer&nbsp;(in&nbsp;pygame&nbsp;coordinates)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+coordinates&nbsp;(numeric)&nbsp;of&nbsp;given&nbsp;point&nbsp;in&nbsp;complex&nbsp;plane&nbsp;of&nbsp;selected&nbsp;fractal&nbsp;instance</tt></dd></dl>
+
+<dl><dt><a name="Mandelbrot-get_grid"><strong>get_grid</strong></a>(self)</dt><dd><tt>Create&nbsp;coordinate&nbsp;grid&nbsp;based&nbsp;on&nbsp;xlim,&nbsp;ylim<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+the&nbsp;two&nbsp;outputs&nbsp;of&nbsp;np.meshgrid&nbsp;converted&nbsp;to&nbsp;pygame&nbsp;coordinates</tt></dd></dl>
+
+<dl><dt><a name="Mandelbrot-interpolate_cmap"><strong>interpolate_cmap</strong></a>(self, unique_colors, interpolation_method, x_obs, y_obs, fact_lowerbound=0, fact_upperbound=255)</dt><dd><tt>take&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map&nbsp;and&nbsp;create&nbsp;full&nbsp;cmap&nbsp;based&nbsp;on&nbsp;chosen&nbsp;interpolation_method&nbsp;(with&nbsp;as&nbsp;many&nbsp;colors&nbsp;as&nbsp;unique_colors)<br>
+&nbsp;<br>
+Sources<br>
+-------<br>
+<a href="https://blogs.mathworks.com/cleve/2019/04/29/makima-piecewise-cubic-interpolation/">https://blogs.mathworks.com/cleve/2019/04/29/makima-piecewise-cubic-interpolation/</a><br>
+&nbsp;<br>
+Args<br>
+----<br>
+unique_colors:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;desired&nbsp;amount&nbsp;of&nbsp;unique&nbsp;colors&nbsp;in&nbsp;colormap<br>
+interpolation_method:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;desired&nbsp;interpolation&nbsp;method<br>
+x_obs:&nbsp;list[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;x-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+y_obs:&nbsp;list[list[int]]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB-values&nbsp;of&nbsp;control&nbsp;points&nbsp;of&nbsp;chosen&nbsp;color&nbsp;map<br>
+fact_lowerbound,&nbsp;fact_upperbound:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower-&nbsp;and&nbsp;upperbound&nbsp;of&nbsp;chosen&nbsp;colorspace&nbsp;(RGB&nbsp;starts&nbsp;with&nbsp;0&nbsp;and&nbsp;ends&nbsp;with&nbsp;255)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+cmap:&nbsp;nd.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;colormap&nbsp;in&nbsp;nd.array&nbsp;with&nbsp;shape&nbsp;(unique_colors,&nbsp;3),&nbsp;in&nbsp;which&nbsp;every&nbsp;row&nbsp;contains&nbsp;a&nbsp;specific&nbsp;RGB&nbsp;color<br>
+fact_upperbound:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upperbound&nbsp;of&nbsp;chosen&nbsp;colorspace</tt></dd></dl>
+
+<dl><dt><a name="Mandelbrot-zoom"><strong>zoom</strong></a>(self, point, zoom_factor)</dt><dd><tt>zooms&nbsp;/&nbsp;moves&nbsp;towards&nbsp;given&nbsp;point&nbsp;(in&nbsp;complex&nbsp;coordinates)&nbsp;in&nbsp;<a href="#Fractal">Fractal</a>&nbsp;(updates&nbsp;xlim,&nbsp;ylim&nbsp;instance&nbsp;variables)<br>
+&nbsp;<br>
+Args<br>
+----<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer&nbsp;(in&nbsp;complex&nbsp;coordinates&nbsp;of&nbsp;given&nbsp;fractal)<br>
+zoom_factor:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;equal&nbsp;to&nbsp;1,&nbsp;we&nbsp;center&nbsp;the&nbsp;image&nbsp;at&nbsp;the&nbsp;given&nbsp;point&nbsp;without&nbsp;zooming&nbsp;in&nbsp;or&nbsp;out;&nbsp;if&nbsp;greater&nbsp;1,&nbsp;we&nbsp;zoom&nbsp;in;&nbsp;if&nbsp;smaller&nbsp;1,&nbsp;we&nbsp;zoom&nbsp;out</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="fractals.fractals.html#Fractal">Fractal</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pygameGUI.user_input</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pygameGUI.html"><font color="#ffffff">pygameGUI</font></a>.user_input</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cdokumente%5C2_bildung%5C2_msc%5C1_classes%5Cpython%5C3_project%5C0_code%20dev%5Cstage3-9%20-%20better%20documentation2%5Cpygamegui%5Cuser_input.py">d:\dokumente\2_bildung\2_msc\1_classes\python\3_project\0_code dev\stage3-9 - better documentation2\pygamegui\user_input.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="tkinter.html">tkinter</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pygameGUI.user_input.html#UserInput">UserInput</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UserInput">class <strong>UserInput</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#UserInput">UserInput</a>(label_names,&nbsp;dropdown_options,&nbsp;resolution=0,&nbsp;cmap=0,&nbsp;interpolation_method=2,&nbsp;color_norm=1,&nbsp;show_julia=0,&nbsp;max_iter=100,&nbsp;unique_colors=4000)<br>
+&nbsp;<br>
+Stores&nbsp;basic&nbsp;variables&nbsp;of&nbsp;tkinter&nbsp;GUI&nbsp;(label&nbsp;names&nbsp;and&nbsp;various&nbsp;settings)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="UserInput-__init__"><strong>__init__</strong></a>(self, label_names, dropdown_options, resolution=0, cmap=0, interpolation_method=2, color_norm=1, show_julia=0, max_iter=100, unique_colors=4000)</dt><dd><tt>Constructor&nbsp;of&nbsp;<a href="#UserInput">UserInput</a>&nbsp;class&nbsp;instance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Args<br>
+----<br>
+label_names:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;to&nbsp;be&nbsp;display&nbsp;the&nbsp;label&nbsp;for&nbsp;each&nbsp;setting&nbsp;in&nbsp;the&nbsp;tkinter&nbsp;window<br>
+dropdown_options:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;populates&nbsp;dropdown&nbsp;settings&nbsp;with&nbsp;strings&nbsp;from&nbsp;list&nbsp;of&nbsp;options<br>
+resolutions,&nbsp;cmap,&nbsp;interpolation_method,&nbsp;color_norm,&nbsp;show_julia:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;default&nbsp;value&nbsp;for&nbsp;each&nbsp;dropdown&nbsp;fractal&nbsp;setting&nbsp;option&nbsp;when&nbsp;tkinter&nbsp;window&nbsp;is&nbsp;first&nbsp;generated;&nbsp;integer&nbsp;references&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;to&nbsp;generate&nbsp;actual&nbsp;value&nbsp;displayed<br>
+max_iter,&nbsp;unique_colors:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;default&nbsp;value&nbsp;for&nbsp;each&nbsp;slider&nbsp;fractal&nbsp;setting&nbsp;option&nbsp;when&nbsp;tkinter&nbsp;window&nbsp;is&nbsp;first&nbsp;generated</tt></dd></dl>
+
+<dl><dt><a name="UserInput-build_layout"><strong>build_layout</strong></a>(self, frame)</dt><dd><tt>Creates&nbsp;tkinter&nbsp;objects&nbsp;to&nbsp;be&nbsp;displayed&nbsp;(labels,&nbsp;dropdowns,&nbsp;sliders)&nbsp;as&nbsp;well&nbsp;as&nbsp;update&nbsp;button<br>
+&nbsp;<br>
+Args<br>
+----<br>
+frame:&nbsp;<a href="builtins.html#object">object</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;frame&nbsp;on&nbsp;which&nbsp;the&nbsp;tkinter&nbsp;is&nbsp;currently&nbsp;displayed</tt></dd></dl>
+
+<dl><dt><a name="UserInput-create_dd"><strong>create_dd</strong></a>(self, frame)</dt><dd><tt>Create&nbsp;tkinter&nbsp;dropdown&nbsp;objects<br>
+&nbsp;<br>
+Args<br>
+----<br>
+frame:&nbsp;<a href="builtins.html#object">object</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;frame&nbsp;on&nbsp;which&nbsp;the&nbsp;tkinter&nbsp;is&nbsp;currently&nbsp;displayed<br>
+&nbsp;<br>
+Returns&nbsp;<br>
+-------<br>
+txtfields:&nbsp;list&nbsp;of&nbsp;strings<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;text&nbsp;options&nbsp;for&nbsp;each&nbsp;dropdown&nbsp;menu<br>
+dropdowns:&nbsp;list&nbsp;of&nbsp;tuples<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generates&nbsp;each&nbsp;dropdown&nbsp;menu&nbsp;for&nbsp;the&nbsp;tkinter&nbsp;window</tt></dd></dl>
+
+<dl><dt><a name="UserInput-create_frame"><strong>create_frame</strong></a>(self)</dt><dd><tt>Create&nbsp;tkinter&nbsp;frame<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+basic&nbsp;frame&nbsp;<a href="builtins.html#object">object</a>&nbsp;representing&nbsp;tkinter&nbsp;window</tt></dd></dl>
+
+<dl><dt><a name="UserInput-create_labels"><strong>create_labels</strong></a>(self, frame, font, font_size)</dt><dd><tt>Create&nbsp;tkinter&nbsp;labels&nbsp;(description&nbsp;of&nbsp;dropdown&nbsp;/&nbsp;sliders)<br>
+&nbsp;&nbsp;&nbsp;<br>
+Args<br>
+----<br>
+frame:&nbsp;<a href="builtins.html#object">object</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;frame&nbsp;on&nbsp;which&nbsp;the&nbsp;tkinter&nbsp;is&nbsp;currently&nbsp;displayed<br>
+font:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font&nbsp;type&nbsp;used&nbsp;to&nbsp;generate&nbsp;text&nbsp;in&nbsp;tkinter&nbsp;window<br>
+font_size:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font&nbsp;size&nbsp;used&nbsp;to&nbsp;generate&nbsp;text&nbsp;in&nbsp;tkinter&nbsp;window<br>
+&nbsp;<br>
+Returns&nbsp;<br>
+-------<br>
+labels:&nbsp;list&nbsp;of&nbsp;tuples<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;formatting&nbsp;setting&nbsp;for&nbsp;each&nbsp;label</tt></dd></dl>
+
+<dl><dt><a name="UserInput-get_inputs"><strong>get_inputs</strong></a>(self)</dt><dd><tt>Return&nbsp;instance&nbsp;variables&nbsp;(resolution&nbsp;reformatted&nbsp;into&nbsp;width&nbsp;&amp;&nbsp;height)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+width,&nbsp;height:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;updated&nbsp;resolution&nbsp;of&nbsp;the&nbsp;window<br>
+dropdown_values,&nbsp;slider_values:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instance&nbsp;variables&nbsp;for&nbsp;sliders</tt></dd></dl>
+
+<dl><dt><a name="UserInput-place_objects"><strong>place_objects</strong></a>(self, labels, dropdowns, sliders, x, y)</dt><dd><tt>Place&nbsp;tkinter&nbsp;objects<br>
+&nbsp;<br>
+Args<br>
+----<br>
+labels:&nbsp;list&nbsp;of&nbsp;tuples<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;formatting&nbsp;setting&nbsp;for&nbsp;each&nbsp;label<br>
+dropdowns:&nbsp;list&nbsp;of&nbsp;tuples<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;formatting&nbsp;setting&nbsp;for&nbsp;each&nbsp;dropdown&nbsp;menu<br>
+sliders:&nbsp;list&nbsp;of&nbsp;tuples<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;formatting&nbsp;setting&nbsp;for&nbsp;each&nbsp;slider<br>
+x,&nbsp;y:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;coordinates&nbsp;of&nbsp;each&nbsp;<a href="builtins.html#object">object</a>&nbsp;in&nbsp;tkinter&nbsp;window</tt></dd></dl>
+
+<dl><dt><a name="UserInput-update_button_clicked"><strong>update_button_clicked</strong></a>(self, frame, dropdowns, sliders)</dt><dd><tt>When&nbsp;update&nbsp;button&nbsp;clicked&nbsp;(1)&nbsp;update&nbsp;instance&nbsp;variables&nbsp;and&nbsp;(2)&nbsp;close&nbsp;tkinter&nbsp;frame<br>
+&nbsp;<br>
+Args<br>
+----<br>
+frame:&nbsp;<a href="builtins.html#object">object</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;frame&nbsp;on&nbsp;which&nbsp;the&nbsp;tkinter&nbsp;is&nbsp;currently&nbsp;displayed<br>
+dropdowns:&nbsp;list&nbsp;of&nbsp;tuples<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current&nbsp;formatting&nbsp;setting&nbsp;for&nbsp;each&nbsp;dropdown&nbsp;menu<br>
+sliders:&nbsp;list&nbsp;of&nbsp;tuples<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current&nbsp;formatting&nbsp;setting&nbsp;for&nbsp;each&nbsp;slider</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

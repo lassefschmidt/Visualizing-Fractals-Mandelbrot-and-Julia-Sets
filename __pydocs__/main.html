@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>main</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cdokumente%5C2_bildung%5C2_msc%5C1_classes%5Cpython%5C3_project%5C0_code%20dev%5Cstage3-7%20-%20new%20pygame%20buttons%5Cmain.py">d:\dokumente\2_bildung\2_msc\1_classes\python\3_project\0_code dev\stage3-7 - new pygame buttons\main.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;import&nbsp;own&nbsp;.py&nbsp;files</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-create_buttons"><strong>create_buttons</strong></a>(var)</dt><dd><tt>Create&nbsp;buttons&nbsp;and&nbsp;place&nbsp;them&nbsp;based&nbsp;on&nbsp;current&nbsp;resolution<br>
+&nbsp;<br>
+Args<br>
+----<br>
+var:&nbsp;tuple&nbsp;of&nbsp;currently&nbsp;selected&nbsp;options<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+Different&nbsp;lists&nbsp;of&nbsp;buttons&nbsp;(so&nbsp;we&nbsp;can&nbsp;easily&nbsp;show&nbsp;the&nbsp;currently&nbsp;required&nbsp;buttons&nbsp;on&nbsp;the&nbsp;screen)</tt></dd></dl>
+ <dl><dt><a name="-display_fractal"><strong>display_fractal</strong></a>(fractal, gui, screen, var, pg_x=0, pg_y=0, c_x=0, c_y=0)</dt><dd><tt>Update&nbsp;fractal&nbsp;with&nbsp;current&nbsp;settings,&nbsp;recalculate&nbsp;and&nbsp;show&nbsp;it&nbsp;in&nbsp;pygame<br>
+&nbsp;<br>
+Args<br>
+----<br>
+fractal:&nbsp;class&nbsp;instance&nbsp;of&nbsp;Fractal<br>
+gui:&nbsp;Class&nbsp;Instance&nbsp;of&nbsp;GUI<br>
+screen:&nbsp;pygame&nbsp;screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;screen&nbsp;on&nbsp;which&nbsp;the&nbsp;game&nbsp;is&nbsp;currently&nbsp;displayed<br>
+var:&nbsp;tuple&nbsp;of&nbsp;currently&nbsp;selected&nbsp;options#<br>
+pg_x,&nbsp;pg_y:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pygame&nbsp;coordinates&nbsp;that&nbsp;denote&nbsp;from&nbsp;where&nbsp;on&nbsp;we&nbsp;will&nbsp;show&nbsp;the&nbsp;given&nbsp;fractal&nbsp;on&nbsp;the&nbsp;given&nbsp;screen&nbsp;(default&nbsp;=&nbsp;0&nbsp;as&nbsp;we&nbsp;usually&nbsp;start&nbsp;in&nbsp;top&nbsp;left&nbsp;corner)<br>
+c_x,&nbsp;c_y:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;complex&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;selected&nbsp;by&nbsp;the&nbsp;user&nbsp;(used&nbsp;to&nbsp;update&nbsp;JuliaSet;&nbsp;default&nbsp;=&nbsp;0)</tt></dd></dl>
+ <dl><dt><a name="-fetch_options"><strong>fetch_options</strong></a>()</dt><dd><tt>Return&nbsp;all&nbsp;available&nbsp;options&nbsp;that&nbsp;can&nbsp;be&nbsp;selected&nbsp;in&nbsp;the&nbsp;tkinter&nbsp;settings&nbsp;window.</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+ <dl><dt><a name="-show_buttons"><strong>show_buttons</strong></a>(screen, buttons)</dt><dd><tt>Take&nbsp;the&nbsp;given&nbsp;buttons&nbsp;and&nbsp;display&nbsp;them<br>
+&nbsp;<br>
+Args<br>
+----<br>
+screen:&nbsp;pygame&nbsp;screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;screen&nbsp;on&nbsp;which&nbsp;the&nbsp;game&nbsp;is&nbsp;currently&nbsp;displayed<br>
+buttons:&nbsp;list&nbsp;of&nbsp;buttons<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;buttons&nbsp;we&nbsp;want&nbsp;to&nbsp;display&nbsp;on&nbsp;the&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-show_ui"><strong>show_ui</strong></a>(label_names, options, var)</dt><dd><tt>Open&nbsp;tkinter&nbsp;settings&nbsp;window.<br>
+&nbsp;<br>
+Args<br>
+----<br>
+label_names:&nbsp;list[str]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;the&nbsp;descriptions&nbsp;of&nbsp;the&nbsp;different&nbsp;dropdown&nbsp;menus&nbsp;&amp;&nbsp;sliders<br>
+options:&nbsp;tuple&nbsp;of&nbsp;5&nbsp;lists&nbsp;of&nbsp;strings<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;all&nbsp;options&nbsp;for&nbsp;the&nbsp;5&nbsp;dropdown&nbsp;menus<br>
+var:&nbsp;tuple&nbsp;of&nbsp;currently&nbsp;selected&nbsp;options<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+ui:&nbsp;Class&nbsp;Instance&nbsp;of&nbsp;UserInput<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stores&nbsp;previously&nbsp;selected&nbsp;values&nbsp;until&nbsp;settings&nbsp;window&nbsp;is&nbsp;opened&nbsp;again</tt></dd></dl>
+ <dl><dt><a name="-update_resolution"><strong>update_resolution</strong></a>(gui, screen, var)</dt><dd><tt>Create&nbsp;new&nbsp;pygame&nbsp;display&nbsp;if&nbsp;user&nbsp;changed&nbsp;resolution<br>
+&nbsp;<br>
+Args<br>
+----<br>
+gui:&nbsp;Class&nbsp;Instance&nbsp;of&nbsp;GUI<br>
+screen:&nbsp;pygame&nbsp;screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;screen&nbsp;on&nbsp;which&nbsp;the&nbsp;game&nbsp;is&nbsp;currently&nbsp;displayed<br>
+var:&nbsp;tuple&nbsp;of&nbsp;currently&nbsp;selected&nbsp;options<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+gui:&nbsp;Class&nbsp;Instance&nbsp;of&nbsp;GUI<br>
+screen:&nbsp;pygame&nbsp;screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;screen&nbsp;on&nbsp;which&nbsp;the&nbsp;game&nbsp;is&nbsp;to&nbsp;be&nbsp;displayed<br>
+update:&nbsp;boolean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;whether&nbsp;the&nbsp;resolution&nbsp;was&nbsp;changed&nbsp;and&nbsp;we&nbsp;consequently&nbsp;had&nbsp;to&nbsp;re-initialize&nbsp;gui&nbsp;and&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-zoom_fractal"><strong>zoom_fractal</strong></a>(lmr_click, fractal, point)</dt><dd><tt>Zoom&nbsp;/&nbsp;move&nbsp;fractal&nbsp;on&nbsp;screen&nbsp;depending&nbsp;on&nbsp;type&nbsp;of&nbsp;mouseclick&nbsp;(left&nbsp;/&nbsp;middle&nbsp;/&nbsp;right)<br>
+&nbsp;<br>
+Args<br>
+----<br>
+lmr_click:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pygame&nbsp;mouseclick&nbsp;identification&nbsp;(1&nbsp;==&nbsp;left-click;&nbsp;2&nbsp;==&nbsp;mid-click;&nbsp;3&nbsp;==&nbsp;right-click)<br>
+fractal:&nbsp;class&nbsp;instance&nbsp;of&nbsp;Fractal<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pygame&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;selected&nbsp;by&nbsp;the&nbsp;user</tt></dd></dl>
+</td></tr></table>
+</body></html>

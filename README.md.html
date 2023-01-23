@@ -1,0 +1,52 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Visualizing Fractals.md</title><style></style></head><body id="preview">
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="Visualizing_Fractals__ReadMe_Guide_0"></a>Visualizing Fractals – ReadMe Guide</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">This file will explain to users how to run our “Visualizing Fractals” code to generate and customize a Mandelbrot Set in pygame.</p>
+<p class="has-line-data" data-line-start="4" data-line-end="5">This guide includes information on:</p>
+<ul>
+<li class="has-line-data" data-line-start="6" data-line-end="7">Features of the code</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">How to run the code and navigate the program</li>
+<li class="has-line-data" data-line-start="8" data-line-end="10">How to choose “good” settings for the Mandelbrot Set</li>
+</ul>
+<h2 class="code-line" data-line-start=10 data-line-end=11><a id="Features_10"></a>Features</h2>
+<p class="has-line-data" data-line-start="12" data-line-end="13">Our “Visualizing Fractals” code allows the user to:</p>
+<ul>
+<li class="has-line-data" data-line-start="14" data-line-end="15">Genreate a Mandelbrot Set in pygame</li>
+<li class="has-line-data" data-line-start="15" data-line-end="16">Zoom in and out, and navigate around the pygame window with his/her mouse</li>
+<li class="has-line-data" data-line-start="16" data-line-end="18">Customize the pygame window from a series of settings in tkinter GUI</li>
+</ul>
+<p class="has-line-data" data-line-start="18" data-line-end="19">Tkinter GUI settings include:</p>
+<ul>
+<li class="has-line-data" data-line-start="20" data-line-end="21">Resolution: Size of the users pygame window</li>
+<li class="has-line-data" data-line-start="21" data-line-end="22">Color Scheme: Color map for the Mandelbrot visualization</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">Color Interpolation: Method by which the function travels through the selected color gradient</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Color Selection based on: Method by which colors are selected based on iteration count</li>
+<li class="has-line-data" data-line-start="24" data-line-end="25">Julia Set: Julia Set inclusion in the pygame window</li>
+<li class="has-line-data" data-line-start="25" data-line-end="26">Iterations: Number of times the equation runs</li>
+<li class="has-line-data" data-line-start="26" data-line-end="28">Number of Colors: Number of colors included from the color map</li>
+</ul>
+<h2 class="code-line" data-line-start=28 data-line-end=29><a id="Running_the_Code__Navigating_the_Program_28"></a>Running the Code &amp; Navigating the Program</h2>
+<ol>
+<li class="has-line-data" data-line-start="30" data-line-end="31">Download and open all associated files / folders including the main, pygameGUI, fractals, and other associated init, pydoc, and pycache files</li>
+<li class="has-line-data" data-line-start="31" data-line-end="32">Run the program from the <a href="http://main.py">main.py</a> file</li>
+<li class="has-line-data" data-line-start="32" data-line-end="33">In the tkinter window that opens, choose any settings and then click the “Update Fractal” button. (It is recommended to begin with default settings and then customize them later.)</li>
+<li class="has-line-data" data-line-start="33" data-line-end="37">Once the pygame window is generated, navigate around the window by:<br>
+a) Left-clicking to zoom-in (or clicking regularly on a Mac)<br>
+b) Right-clicking to zoom-out (or clicking with two fingers on a Mac)<br>
+c) Clicking in locations where you would like to zoom-in and zoom-out of (i.e. the zoom will be directed to / from where the cursor is at the time of the mouse click)</li>
+<li class="has-line-data" data-line-start="37" data-line-end="38">Click the “Open Settings” button in the top left of the screen to return to the tkinter window and update your settings</li>
+<li class="has-line-data" data-line-start="38" data-line-end="40">Exit the pygame window by clicking the “Exit Game” button, closing the window, or terminating the program</li>
+</ol>
+<h3 class="code-line" data-line-start=40 data-line-end=41><a id="Additional_Note_40"></a>Additional Note</h3>
+<ul>
+<li class="has-line-data" data-line-start="41" data-line-end="43">When the Julia Set is selected, move your mouse anywhere on the Mandelbort side of the screen to see how the Julia Set changes</li>
+</ul>
+<h2 class="code-line" data-line-start=43 data-line-end=44><a id="Choosing_Good_Settings_43"></a>Choosing “Good” Settings</h2>
+<p class="has-line-data" data-line-start="45" data-line-end="46">While the user is free to choose any settings he/she pleases, certain setting combinations will yield particularly fascinating results while others will cause difficulties with the program.</p>
+<p class="has-line-data" data-line-start="47" data-line-end="48">The below list includes a few tips for the user to navigate the fractals but is by no means comprehensive of the various combinations of settings that can / should be chosen:</p>
+<ul>
+<li class="has-line-data" data-line-start="49" data-line-end="50">Depending on the size of the user’s computer screen, the resolution settings should be adjusted so no portion of the pygame window is displayed off the screen</li>
+<li class="has-line-data" data-line-start="50" data-line-end="51">Except in instances of deep zoom and high iteration count, the user should set the Color Selection based on smoothed iteration count; however, at deep zoom, the simple iteration count will yield hyper fragmented and interesting images</li>
+<li class="has-line-data" data-line-start="51" data-line-end="52">The Julia Sets are best explored from a less-deep zoom as it will be more dynamic the faster along the coordinate plane that the mouse is moving</li>
+<li class="has-line-data" data-line-start="52" data-line-end="53">Depending on the computing power of the user’s machine, he/she should be wary of going above an iteration count of 1000 as above that the program can run much slower as the user zooms</li>
+</ul>
+</body></html>

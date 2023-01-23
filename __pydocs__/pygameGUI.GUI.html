@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pygameGUI.GUI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pygameGUI.html"><font color="#ffffff">pygameGUI</font></a>.GUI</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cdokumente%5C2_bildung%5C2_msc%5C1_classes%5Cpython%5C3_project%5C0_code%20dev%5Cstage3-7%20-%20new%20pygame%20buttons%5Cpygamegui%5Cgui.py">d:\dokumente\2_bildung\2_msc\1_classes\python\3_project\0_code dev\stage3-7 - new pygame buttons\pygamegui\gui.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;import&nbsp;statements</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pygameGUI.GUI.html#Button">Button</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pygameGUI.GUI.html#GUI">GUI</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Button">class <strong>Button</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Button">Button</a>(color,&nbsp;text_color,&nbsp;x_pos,&nbsp;y_pos,&nbsp;width,&nbsp;height,&nbsp;text='')<br>
+&nbsp;<br>
+Constructor&nbsp;of&nbsp;button&nbsp;class<br>
+&nbsp;<br>
+Class&nbsp;based&nbsp;on:<br>
+--------<br>
+<a href="https://www.youtube.com/watch?v=4_9twnEduFA">https://www.youtube.com/watch?v=4_9twnEduFA</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Button-__init__"><strong>__init__</strong></a>(self, color, text_color, x_pos, y_pos, width, height, text='')</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Button-isOver"><strong>isOver</strong></a>(self, point)</dt><dd><tt>Detect&nbsp;if&nbsp;given&nbsp;point&nbsp;(as&nbsp;tuple&nbsp;(x,y))&nbsp;is&nbsp;within&nbsp;the&nbsp;x-&nbsp;and&nbsp;y-limits&nbsp;of&nbsp;the&nbsp;button<br>
+&nbsp;<br>
+Args<br>
+----<br>
+point:&nbsp;tuple&nbsp;of&nbsp;2&nbsp;integer&nbsp;(in&nbsp;pygame&nbsp;coordinates)</tt></dd></dl>
+
+<dl><dt><a name="Button-show"><strong>show</strong></a>(self, screen)</dt><dd><tt>Show&nbsp;buttons&nbsp;on&nbsp;pygame&nbsp;screen<br>
+&nbsp;<br>
+Args<br>
+----<br>
+screen:&nbsp;pygame&nbsp;screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;screen&nbsp;on&nbsp;which&nbsp;the&nbsp;game&nbsp;is&nbsp;currently&nbsp;displayed</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GUI">class <strong>GUI</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#GUI">GUI</a>(name,&nbsp;width,&nbsp;height)<br>
+&nbsp;<br>
+Stores&nbsp;basic&nbsp;variables&nbsp;of&nbsp;pygame&nbsp;<a href="#GUI">GUI</a>&nbsp;(widht,&nbsp;height&nbsp;and&nbsp;caption&nbsp;of&nbsp;window)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GUI-__init__"><strong>__init__</strong></a>(self, name, width, height)</dt><dd><tt>Constructor&nbsp;of&nbsp;<a href="#GUI">GUI</a>&nbsp;class&nbsp;instance<br>
+&nbsp;<br>
+Args<br>
+----<br>
+name:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;to&nbsp;be&nbsp;displayed&nbsp;in&nbsp;caption&nbsp;of&nbsp;pygame&nbsp;window<br>
+width,&nbsp;height:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;resolution&nbsp;of&nbsp;pygame&nbsp;window</tt></dd></dl>
+
+<dl><dt><a name="GUI-make_surface"><strong>make_surface</strong></a>(self, mu_rgb)</dt><dd><tt>Create&nbsp;pygame&nbsp;surface.&nbsp;Swap&nbsp;rows&nbsp;and&nbsp;columns&nbsp;of&nbsp;mu_rgb&nbsp;to&nbsp;move&nbsp;from&nbsp;matrix&nbsp;coordinate&nbsp;space&nbsp;to&nbsp;pygame&nbsp;coordinate&nbsp;space<br>
+&nbsp;<br>
+Args<br>
+----<br>
+mu_rgb:&nbsp;np.array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contains&nbsp;RGB&nbsp;color&nbsp;for&nbsp;every&nbsp;single&nbsp;point&nbsp;we&nbsp;evaluated&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane&nbsp;(from&nbsp;class&nbsp;Fractal)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+pygame&nbsp;surface&nbsp;in&nbsp;which&nbsp;we&nbsp;set&nbsp;each&nbsp;pixel&nbsp;to&nbsp;its&nbsp;according&nbsp;color&nbsp;in&nbsp;the&nbsp;pygame&nbsp;coordinate&nbsp;system</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

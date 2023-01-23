@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module fractals.gufunc</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="fractals.html"><font color="#ffffff">fractals</font></a>.gufunc</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cdokumente%5C2_bildung%5C2_msc%5C1_classes%5Cpython%5C3_project%5C0_code%20dev%5Cstage3-7%20-%20new%20pygame%20buttons%5Cfractals%5Cgufunc.py">d:\dokumente\2_bildung\2_msc\1_classes\python\3_project\0_code dev\stage3-7 - new pygame buttons\fractals\gufunc.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;import&nbsp;statements</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="numba.html">numba</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-julia_gu"><strong>julia_gu</strong></a>(z, c, max_iter, esc_radius_sq)</dt><dd><tt>compute&nbsp;all&nbsp;julia&nbsp;iterations&nbsp;for&nbsp;a&nbsp;given&nbsp;point&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane&nbsp;of&nbsp;the&nbsp;fractal<br>
+&nbsp;<br>
+Args<br>
+----<br>
+z:&nbsp;complex128<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current&nbsp;point&nbsp;on&nbsp;complex&nbsp;plane&nbsp;for&nbsp;which&nbsp;we&nbsp;evaluate&nbsp;its&nbsp;simple&nbsp;&amp;&nbsp;smoothed&nbsp;iteration&nbsp;count<br>
+c:&nbsp;complex&nbsp;128<br>
+&nbsp;&nbsp;&nbsp;&nbsp;chosen&nbsp;constant&nbsp;complex&nbsp;value&nbsp;with&nbsp;which&nbsp;we&nbsp;will&nbsp;evaluate&nbsp;z<br>
+max_iter:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;number&nbsp;of&nbsp;iterations&nbsp;to&nbsp;be&nbsp;computed&nbsp;for&nbsp;each&nbsp;point<br>
+esc_radius_sq:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;squared&nbsp;escape&nbsp;radius&nbsp;(if&nbsp;|z|^2&nbsp;=&nbsp;Z_real^2&nbsp;+&nbsp;Z_i^2&nbsp;becomes&nbsp;greater&nbsp;than&nbsp;the&nbsp;squared&nbsp;escape&nbsp;radius,&nbsp;we&nbsp;assume&nbsp;that&nbsp;it&nbsp;has&nbsp;escaped)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+tuple&nbsp;containing&nbsp;the&nbsp;simple&nbsp;and&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;for&nbsp;the&nbsp;given&nbsp;point&nbsp;z</tt></dd></dl>
+ <dl><dt><a name="-mandelbrot_gu"><strong>mandelbrot_gu</strong></a>(z, max_iter, esc_radius_sq)</dt><dd><tt>compute&nbsp;all&nbsp;mandelbrot&nbsp;iterations&nbsp;for&nbsp;a&nbsp;given&nbsp;point&nbsp;on&nbsp;the&nbsp;complex&nbsp;plane&nbsp;of&nbsp;the&nbsp;fractal<br>
+&nbsp;<br>
+Args<br>
+----<br>
+z:&nbsp;complex128<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current&nbsp;point&nbsp;on&nbsp;complex&nbsp;plane&nbsp;for&nbsp;which&nbsp;we&nbsp;evaluate&nbsp;its&nbsp;simple&nbsp;&amp;&nbsp;smoothed&nbsp;iteration&nbsp;count<br>
+max_iter:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;number&nbsp;of&nbsp;iterations&nbsp;to&nbsp;be&nbsp;computed&nbsp;for&nbsp;each&nbsp;point<br>
+esc_radius_sq:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;squared&nbsp;escape&nbsp;radius&nbsp;(if&nbsp;|z|^2&nbsp;=&nbsp;Z_real^2&nbsp;+&nbsp;Z_i^2&nbsp;becomes&nbsp;greater&nbsp;than&nbsp;the&nbsp;squared&nbsp;escape&nbsp;radius,&nbsp;we&nbsp;assume&nbsp;that&nbsp;it&nbsp;has&nbsp;escaped)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+tuple&nbsp;containing&nbsp;the&nbsp;simple&nbsp;and&nbsp;smoothed&nbsp;iteration&nbsp;count&nbsp;for&nbsp;the&nbsp;given&nbsp;point&nbsp;z</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>complex128</strong> = complex128<br>
+<strong>fetch_iter_color_numpy_gu</strong> = &lt;ufunc 'fetch_iter_color_numpy_gu'&gt;<br>
+<strong>float64</strong> = float64<br>
+<strong>int64</strong> = int64<br>
+<strong>julia_numpy_gu</strong> = &lt;ufunc 'julia_numpy_gu'&gt;<br>
+<strong>mandelbrot_numpy_gu</strong> = &lt;ufunc 'mandelbrot_numpy_gu'&gt;</td></tr></table>
+</body></html>
