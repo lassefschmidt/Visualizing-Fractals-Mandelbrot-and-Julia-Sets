@@ -1,18 +1,29 @@
 # Visualizing Fractals -- ReadMe Guide
 
-This file will explain to users how to run our "Visualizing Fractals" code to generate and customize a Mandelbrot Set in pygame.
+![Mandelbrot](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/mandelbrot.PNG)
 
-This guide includes information on:
+This file will explain to users how to run our "Visualizing Fractals" code to generate and customize a Mandelbrot Set in pygame. Also, you will be able to look at the different Julia Sets.
 
-- Features of the code
-- How to run the code and navigate the program
-- How to choose "good" settings for the Mandelbrot Set
+Overall, with our program you can
+
+- generate a Mandelbrot Set in pygame
+- plot the corresponding Julia Set to each point on the Mandelbrot
+- zoom in and out, and navigate around the pygame window with your mouse
+- customize the visualization with many different settings
 
 ## What this program does
 
 The Mandelbrot Set and the Julia Set are popular sets even outside of the mathematics field for their awe-striking aesthetics. Although intricate and complex in appearance, the Mandelbrot Set and the Julia Set follow rather simply mathematical rules. Our project was to create an interactive visualization tool that allows the user to explore the colorful depths of the Mandelbrot Set or simultaneously watch the interesting interplay between the Mandelbrot Set and Julia Set as the variables are adjusted. Overall, you can adjust the following settings:
 
 ![Settings](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/Settings.PNG)
+
+- Resolution: Size of the users pygame window
+- Color Scheme: Color map for the Mandelbrot visualization
+- Color Interpolation: Method by which the function travels through the selected color gradient
+- Color Selection based on: Method by which colors are selected based on iteration count
+- Julia Set: Julia Set inclusion in the pygame window
+- Iterations: Number of times the equation runs
+- Number of Colors: Number of colors included from the color map
 
 ## Basics about the Mandelbrot Set
 
@@ -31,11 +42,11 @@ $$-1^{2} + (-1) = 0$$
 $$0^{2} + (-1) = -1$$
 $$-1^{2} + (-1) = 0$$
 
-Values "in" the Mandelbrot Set are those values that never escape to infinity while those that do are "out" of the Mandelbrot Set.
+Executing main.py with our proposed initial settings leads to this initial visualization of the Mandelbrot.
 
-Executing main.py with our proposed initial settings leads to this result:
+![Mandelbrot](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/mandelbrot.PNG)
 
-![Mandelbrot](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/Game%20Intialization.PNG)
+Only the black values inside the Mandelbrot are those values that never escape to infinity within the chosen threshold of iterations (in initial settings, we iterate over every point in the 2D plane 100 times). All other points are being colored by looking at either the simple or fractional number of iterations it took this point to escape.
 
 ## Basics about the Julia Set
 
@@ -44,24 +55,6 @@ The Julia Set concerns the same equation, except now, the value of $c$ is fixed 
 Julia Sets exhibit widely variant behavior based on their $c$ values, but one simple rule is that for Julia Sets with $z_{n}$ values that sit inside of the Mandelbrot Set, the Julia Set will be a more robust, contiguous shape, whereas for $z_{n}$ values outside of the Mandelbrot Set, the Julia Set will be a dispersed, archipelago-like structure. After activating Julia sets with otherwise intial settings, our program will show this result (hover over Mandelbrot to see the different Julia sets at each point).
 
 ![Julia Set](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/julia%20set.PNG)
-
-## Features
-
-Our "Visualizing Fractals" code allows the user to:
-
-- Genreate a Mandelbrot Set in pygame
-- Zoom in and out, and navigate around the pygame window with his/her mouse
-- Customize the pygame window from a series of settings in tkinter GUI
-
-Tkinter GUI settings include:
-
-- Resolution: Size of the users pygame window
-- Color Scheme: Color map for the Mandelbrot visualization
-- Color Interpolation: Method by which the function travels through the selected color gradient
-- Color Selection based on: Method by which colors are selected based on iteration count
-- Julia Set: Julia Set inclusion in the pygame window
-- Iterations: Number of times the equation runs
-- Number of Colors: Number of colors included from the color map
 
 ## Running the Code & Navigating the Program
 
@@ -85,3 +78,11 @@ The below list includes a few tips for the user to navigate the fractals but is 
 - Except in instances of deep zoom and high iteration count, the user should set the Color Selection based on smoothed iteration count; however, at deep zoom, the simple iteration count will yield hyper fragmented and interesting images
 - The Julia Sets are best explored from a less-deep zoom as it will be more dynamic the faster along the coordinate plane that the mouse is moving
 - Depending on the computing power of the user's machine, he/she should be wary of going above an iteration count of 1000 as above that the program can run much slower as the user zooms
+
+Below, you can find some well-known regions of the Mandelbrot. Can you find them? :)
+1) The Dragons
+![Dragons](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/dragons.PNG)
+2) The Baby Mandelbrot
+![BabyMandel](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/baby%20mandelbrot.PNG)
+3) The Sea Horse Valley
+![SeaHorseValley](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/sea%20horse%20valley.PNG)
