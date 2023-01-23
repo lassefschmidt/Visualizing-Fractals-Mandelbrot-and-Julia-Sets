@@ -79,6 +79,8 @@ The below list includes a few tips for the user to navigate the fractals but is 
 - The Julia Sets are best explored from a less-deep zoom as it will be more dynamic the faster along the coordinate plane that the mouse is moving
 - Depending on the computing power of the user's machine, he/she should be wary of going above an iteration count of 1000 as above that the program can run much slower as the user zooms
 
+## Let the treasure hunt begin!
+
 Below, you can find some well-known regions of the Mandelbrot. Can you find them? :)
 1) The Dragons
 ![Dragons](https://github.com/lassefschmidt/Visualizing-Fractals-Mandelbrot-and-Julia-Sets/blob/main/sample_images/dragons.PNG)
